@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Otimização de Pré-visualização para WhatsApp (GitHub Pages) -->
     <title>Lavoie Boutique | Elegância em Cada Detalhe</title>
+    <meta name="description" content="Vestido Longo Preto com fenda lateral e costas abertas por R$ 200,00 na Lavoie Boutique.">
+    
+    <!-- Open Graph / WhatsApp Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lavoie Boutique | Vestido Longo Preto">
+    <meta property="og:description" content="Elegância em cada detalhe. Garanta o seu Vestido Longo Preto por R$ 200,00.">
+    <meta property="og:image" content="Eleg%C3%A2ncia%20Noturna%20com%20Orqu%C3%ADdeas%20e%20Champanhe_2.png">
+
+    <!-- Fontes Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -27,6 +38,10 @@
             font-family: 'Montserrat', sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: var(--bg-principal);
             color: var(--cinza-texto);
@@ -39,7 +54,7 @@
             letter-spacing: 1px;
         }
 
-        /* Cabeçalho */
+        /* Cabeçalho Sticky */
         header {
             background-color: var(--bg-principal);
             border-bottom: 1px solid var(--borda-suave);
@@ -64,4 +79,137 @@
             margin-left: 20px;
             text-decoration: none;
             color: var(--marrom-suave);
-            font-
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--rosa-destaque);
+        }
+
+        /* Botão Rosa Principal */
+        .btn-rosa {
+            display: inline-block;
+            background-color: var(--rosa-destaque);
+            color: #FFFFFF;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(232, 152, 182, 0.3);
+        }
+
+        .btn-rosa:hover {
+            background-color: var(--rosa-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(232, 152, 182, 0.4);
+        }
+
+        /* Hero / Capa */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 5%;
+            background-color: var(--bg-suave);
+            min-height: 80vh;
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p.subtitulo {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--rosa-destaque);
+            margin-bottom: 30px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .hero-image {
+            max-width: 45%;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* Detalhes do Produto */
+        .produto {
+            padding: 80px 5%;
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .produto-galeria {
+            flex: 1;
+            display: flex;
+            gap: 15px;
+        }
+
+        .produto-galeria img {
+            width: 50%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .produto-info {
+            flex: 1;
+        }
+
+        .produto-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .preco {
+            font-size: 2.2rem;
+            color: var(--marrom-suave);
+            font-weight: 700;
+            margin: 15px 0 5px 0;
+        }
+
+        .parcelamento {
+            font-size: 0.95rem;
+            color: var(--rosa-destaque);
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+
+        .detalhes-lista {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .detalhes-lista li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--borda-suave);
+            font-size: 0.95rem;
+        }
+
+        .detalhes-lista strong {
+            color: var(--marrom-suave);
+        }
+
+        /* Tabela Guia de Tamanhos */
+        .tamanhos {

@@ -213,3 +213,203 @@
 
         /* Tabela Guia de Tamanhos */
         .tamanhos {
+            background-color: var(--bg-suave);
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .tamanhos h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .tabela-tamanhos {
+            max-width: 600px;
+            margin: 0 auto;
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+
+        .tabela-tamanhos th, .tabela-tamanhos td {
+            padding: 12px 15px;
+            border: 1px solid var(--borda-suave);
+        }
+
+        .tabela-tamanhos th {
+            background-color: var(--rosa-bebe);
+            color: var(--marrom-suave);
+        }
+
+        /* Rodapé de Contato */
+        footer {
+            background-color: var(--bg-principal);
+            border-top: 1px solid var(--borda-suave);
+            padding: 40px 5% 20px;
+            text-align: center;
+        }
+
+        .contato-info {
+            margin-bottom: 25px;
+        }
+
+        .contato-info p {
+            margin: 5px 0;
+            font-size: 0.95rem;
+        }
+
+        .redes-sociais a {
+            color: var(--rosa-destaque);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 10px;
+        }
+
+        .copyright {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+
+        /* Dispositivos Móveis */
+        @media (max-width: 768px) {
+            .hero, .produto {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text, .hero-image, .produto-info {
+                max-width: 100%;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .produto-galeria {
+                flex-direction: column;
+            }
+
+            .produto-galeria img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">LAVOIE BOUTIQUE</a>
+        <nav>
+            <a href="#produto">O Vestido</a>
+            <a href="#tamanhos">Tamanhos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Seção Capa (Hero) -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>LAVOIE BOUTIQUE</h1>
+            <p class="subtitulo">Elegância em cada detalhe</p>
+            <p style="margin-bottom: 25px;">Descubra a sofisticação do nosso Vestido Longo Preto com fenda lateral e costas abertas. O equilíbrio perfeito entre delicadeza e poder.</p>
+            <a href="#produto" class="btn-rosa">CONHEÇA O VESTIDO</a>
+        </div>
+        <div class="hero-image">
+            <img src="Eleg%C3%A2ncia%20Noturna%20com%20Orqu%C3%ADdeas%20e%20Champanhe_2.png" alt="Lavoie Boutique - Vestido Preto Frente">
+        </div>
+    </section>
+
+    <!-- Apresentação do Produto -->
+    <section class="produto" id="produto">
+        <div class="produto-galeria">
+            <img src="Eleg%C3%A2ncia%20Noturna%20com%20Orqu%C3%ADdeas%20e%20Champanhe_2.png" alt="Vestido Longo Preto - Frente">
+            <img src="Glamour%20Noturno%20no%20Hotel%20Luxuoso.png" alt="Vestido Longo Preto - Costas">
+        </div>
+
+        <div class="produto-info">
+            <h2>Vestido Longo Preto</h2>
+            <p class="preco">R$ 200,00</p>
+            <p class="parcelamento">até 4x de R$ 50,00 sem juros (ou R$ 180,00 à vista no PIX)</p>
+
+            <ul class="detalhes-lista">
+                <li><strong>Cor:</strong> Preto clássico</li>
+                <li><strong>Comprimento:</strong> Longo</li>
+                <li><strong>Detalhes:</strong> Fenda lateral elegante e costas abertas</li>
+                <li><strong>Tamanhos disponíveis:</strong> PP ao GG (sob consulta)</li>
+            </ul>
+
+            <a href="https://wa.me/5515997576895?text=Ol%C3%A1%2C%20J%C3%BAlia!%20Gostaria%20de%20comprar%20o%20Vestido%20Longo%20Preto%20por%20R%24%20200%2C00." target="_blank" class="btn-rosa">
+                COMPRAR PELO WHATSAPP
+            </a>
+        </div>
+    </section>
+
+    <!-- Guia de Tamanhos -->
+    <section class="tamanhos" id="tamanhos">
+        <h3>Guia de Tamanhos</h3>
+        <table class="tabela-tamanhos">
+            <thead>
+                <tr>
+                    <th>Tamanho</th>
+                    <th>Busto (cm)</th>
+                    <th>Cintura (cm)</th>
+                    <th>Quadril (cm)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PP (34)</td>
+                    <td>80-84</td>
+                    <td>62-66</td>
+                    <td>90-94</td>
+                </tr>
+                <tr>
+                    <td>P (36)</td>
+                    <td>85-89</td>
+                    <td>67-71</td>
+                    <td>95-99</td>
+                </tr>
+                <tr>
+                    <td>M (38)</td>
+                    <td>90-94</td>
+                    <td>72-76</td>
+                    <td>100-104</td>
+                </tr>
+                <tr>
+                    <td>G (40)</td>
+                    <td>95-99</td>
+                    <td>77-81</td>
+                    <td>105-109</td>
+                </tr>
+                <tr>
+                    <td>GG (42)</td>
+                    <td>100-104</td>
+                    <td>82-86</td>
+                    <td>110-114</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Rodapé e Contato -->
+    <footer id="contato">
+        <div class="contato-info">
+            <h3>Atendimento exclusivo</h3>
+            <p>Vendedora: <strong>Júlia</strong></p>
+            <p>WhatsApp: <strong>(15) 99757-6895</strong></p>
+        </div>
+
+        <div class="redes-sociais">
+            <a href="https://instagram.com/lavoie_boutique" target="_blank">@lavoie_boutique</a>
+        </div>
+
+        <p class="copyright">© Lavoie Boutique. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

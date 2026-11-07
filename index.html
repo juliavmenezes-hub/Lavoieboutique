@@ -165,3 +165,184 @@
             color: #000;
             margin: 60px 0 40px;
         }
+
+        .sizes-table-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        table {
+            width: 100%;
+            max-width: 600px;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #FDFDFD;
+            font-weight: 700;
+        }
+
+        footer {
+            padding: 60px 0;
+            background-color: #FDFDFD;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            display: flex;
+            gap: 40px;
+            justify-content: space-between;
+        }
+
+        .contact-info {
+            flex: 2;
+        }
+
+        .social-links {
+            flex: 1;
+        }
+
+        .contact-title {
+            margin-bottom: 20px;
+        }
+
+        .pink-link {
+            color: var(--primary-pink);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-logo-group">
+                    <div class="header-logo"><h1>LAVOIE BOUTIQUE</h1></div>
+                    <div class="header-slogan"><p>"Elegância em cada detalhe"</p></div>
+                </div>
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="#galeria">GALERIA</a></li>
+                        <li><a href="#sobre">SOBRE</a></li>
+                        <li><a href="#contato">WHATSAPP</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção Hero (Capa) -->
+    <section class="hero" id="sobre">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p style="font-family: 'Playfair Display', serif; font-size: 16px;">CONHEÇA O VESTIDO</p>
+                    <p style="color: var(--soft-brown); font-size: 14px;">Onde o requinte encontra a feminilidade. O equilíbrio perfeito de sofisticação e sensualidade, criado para mulheres que desejam ser lembradas.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="Elegância Noturna com Orquídeas e Champanhe_2.png" alt="Lavoie Boutique Vestido Preto Hero">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção do Produto -->
+    <section class="product">
+        <div class="container">
+            <div class="product-content">
+                <div class="product-gallery">
+                    <img src="Elegância Noturna com Orquídeas e Champanhe_2.png" alt="Vestido Preto Frente Lavoie Boutique">
+                    <img src="Glamour Noturno no Hotel Luxuoso.png" alt="Vestido Preto Costas Lavoie Boutique">
+                </div>
+                <div class="product-details">
+                    <h2 class="product-title">CONHEÇA O VESTIDO</h2>
+                    <p style="color: var(--soft-brown);">Onde o requinte encontra a feminilidade.</p>
+                    <p style="color: var(--soft-brown);">O equilíbrio perfeito de sofisticação e sensualidade.</p>
+                    
+                    <p class="product-price">R$ 2.468,00</p>
+                    
+                    <p style="font-size: 14px; font-weight: 700;">Até 6x de R$ 411,33 sem juros</p>
+                    <p style="font-size: 14px; color: var(--soft-brown); margin: 0;">R$ 2.221,20 à vista (10% Desc.) no Pix.</p>
+                    <p style="font-size: 14px; color: var(--soft-brown); margin: 0;">Cartão de Crédito ou Débito e Pix.</p>
+                    
+                    <a href="https://wa.me/5515997576895?text=Ol%C3%A1%2C%20J%C3%BAlia!%20Gostaria%20de%20comprar%20o%20Vestido%20Longo%20Preto." target="_blank" class="buy-button">COMPRAR PELO WHATSAPP</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria e Guia de Tamanhos -->
+    <section class="gallery-sizes" id="galeria">
+        <div class="container">
+            <h3 class="gallery-title">GALERIA</h3>
+            <div class="product-gallery">
+                <img src="Elegância Noturna com Orquídeas e Champanhe_2.png" alt="Lavoie Boutique Galeria Frente">
+                <img src="Glamour Noturno no Hotel Luxuoso.png" alt="Lavoie Boutique Galeria Costas">
+            </div>
+
+            <h3 class="sizes-title">GUIA DE TAMANHOS</h3>
+            <div class="sizes-table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>PP</th>
+                            <th>P</th>
+                            <th>M</th>
+                            <th>G</th>
+                            <th>GG</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>34</td>
+                            <td>36</td>
+                            <td>38</td>
+                            <td>40</td>
+                            <td>42</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p style="font-size: 14px; color: #000; margin-bottom: 5px;">
+                <span style="color: var(--primary-pink); margin-right: 5px;">📸</span>
+                <a href="https://instagram.com/lavoie_boutique" target="_blank" class="pink-link">Lavoieboutique</a>
+            </p>
+            <p style="font-size: 14px; color: var(--soft-brown); font-weight: 700;">Peça única, aproveite!</p>
+        </div>
+    </section>
+
+    <!-- Rodapé de Contato -->
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h2 class="contact-title">CONTATO</h2>
+                    <p style="color: var(--soft-brown); font-size: 14px;">Estamos ansiosos para ouvir de você! Tem dúvidas sobre um produto ou pedido? Entre em contato connosco.</p>
+                    
+                    <div style="margin-top: 30px; font-size: 14px; color: #000;">
+                        <p><span style="color: var(--primary-pink); margin-right: 10px;">📞</span> WhatsApp: <strong>(15) 99757-6895</strong> (Júlia)</p>
+                        <p><span style="color: var(--primary-pink); margin-right: 10px;">📧</span> contact@lavoieboutique.com</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <p style="font-size: 14px; color: #000; font-weight: 700;">REDES SOCIAIS</p>
+                    <div style="margin-top: 20px; font-size: 14px; color: #000;">
+                        <p><span style="color: var(--primary-pink); margin-right: 5px;">📸</span> <a href="https://instagram.com/lavoie_boutique" target="_blank" class="pink-link">@lavoie_boutique</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

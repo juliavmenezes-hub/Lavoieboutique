@@ -409,6 +409,446 @@
         </div>
 
         <p class="copyright">© Lavoie Boutique. Todos os direitos reservados.</p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lavoie Boutique | Elegância em Cada Detalhe</title>
+
+  <meta name="description" content="Vestido Longo Preto por R$ 200,00 na Lavoie Boutique.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lavoie Boutique | Vestido Longo Preto">
+  <meta property="og:description" content="Elegância em cada detalhe. Garanta seu vestido por R$ 200,00.">
+  <meta property="og:image" content="vestido-longo-preto.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-principal: #fff;
+      --bg-suave: #fff9fa;
+      --rosa-bebe: #fad0ec;
+      --rosa-destaque: #e898b6;
+      --rosa-hover: #d883a3;
+      --marrom-suave: #4a3b37;
+      --cinza-texto: #6b5e5b;
+      --borda-suave: #f3e2e6;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg-principal);
+      color: var(--cinza-texto);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--marrom-suave);
+      letter-spacing: 1px;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--borda-suave);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 15px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--marrom-suave);
+      text-decoration: none;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--marrom-suave);
+      font-weight: 500;
+      font-size: .9rem;
+    }
+
+    nav a:hover {
+      color: var(--rosa-destaque);
+    }
+
+    .btn-rosa {
+      display: inline-block;
+      background: var(--rosa-destaque);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: .85rem;
+      transition: .3s;
+      border: 0;
+      cursor: pointer;
+      box-shadow: 0 4px 15px #e898b64d;
+    }
+
+    .btn-rosa:hover {
+      background: var(--rosa-hover);
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 60px 5%;
+      background: var(--bg-suave);
+      min-height: 80vh;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 3.5rem;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+
+    .subtitulo {
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--rosa-destaque);
+      margin-bottom: 30px;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .hero-image {
+      max-width: 45%;
+      text-align: center;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      max-height: 680px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px #0000000d;
+      object-fit: cover;
+    }
+
+    .produto {
+      padding: 80px 5%;
+      display: flex;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .produto-galeria {
+      flex: 1;
+      display: flex;
+      gap: 15px;
+    }
+
+    .produto-galeria img {
+      width: 100%;
+      max-width: 520px;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .produto-info {
+      flex: 1;
+    }
+
+    .produto-info h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .preco {
+      font-size: 2.2rem;
+      color: var(--marrom-suave);
+      font-weight: 700;
+      margin: 15px 0 5px;
+    }
+
+    .parcelamento {
+      font-size: .95rem;
+      color: var(--rosa-destaque);
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    .detalhes-lista {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .detalhes-lista li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--borda-suave);
+      font-size: .95rem;
+    }
+
+    .detalhes-lista strong {
+      color: var(--marrom-suave);
+    }
+
+    .tamanhos {
+      background: var(--bg-suave);
+      padding: 60px 5%;
+      text-align: center;
+    }
+
+    .tamanhos h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .tabela-tamanhos {
+      max-width: 600px;
+      margin: 0 auto;
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .tabela-tamanhos th,
+    .tabela-tamanhos td {
+      padding: 12px 15px;
+      border: 1px solid var(--borda-suave);
+    }
+
+    .tabela-tamanhos th {
+      background: var(--rosa-bebe);
+      color: var(--marrom-suave);
+    }
+
+    footer {
+      border-top: 1px solid var(--borda-suave);
+      padding: 40px 5% 20px;
+      text-align: center;
+    }
+
+    .contato-info {
+      margin-bottom: 25px;
+    }
+
+    .contato-info p {
+      margin: 5px 0;
+      font-size: .95rem;
+    }
+
+    .redes-sociais a {
+      color: var(--rosa-destaque);
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 10px;
+    }
+
+    .copyright {
+      margin-top: 30px;
+      font-size: .8rem;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .hero, .produto {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text,
+      .hero-image,
+      .produto-info {
+        max-width: 100%;
+      }
+
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+
+      .produto-galeria {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .produto-galeria img {
+        width: 100%;
+      }
+
+      .tabela-tamanhos {
+        font-size: .8rem;
+      }
+
+      .tabela-tamanhos th,
+      .tabela-tamanhos td {
+        padding: 8px 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="#" class="logo">LAVOIE BOUTIQUE</a>
+
+    <nav>
+      <a href="#produto">O Vestido</a>
+      <a href="#tamanhos">Tamanhos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+
+    <div class="hero-text">
+      <h1>LAVOIE BOUTIQUE</h1>
+
+      <p class="subtitulo">
+        Elegância em cada detalhe
+      </p>
+
+      <p style="margin-bottom:25px">
+        Descubra a sofisticação do nosso Vestido Longo Preto com fenda lateral. O equilíbrio perfeito entre delicadeza e poder.
+      </p>
+
+      <a href="#produto" class="btn-rosa">
+        CONHEÇA O VESTIDO
+      </a>
+    </div>
+
+    <div class="hero-image">
+      <img
+        src="vestido-longo-preto.jpg"
+        alt="Modelo usando vestido longo preto com fenda lateral">
+    </div>
+
+  </section>
+
+  <section class="produto" id="produto">
+
+    <div class="produto-galeria">
+      <img
+        src="vestido-longo-preto.jpg"
+        alt="Vestido Longo Preto - Frente">
+    </div>
+
+    <div class="produto-info">
+
+      <h2>Vestido Longo Preto</h2>
+
+      <p class="preco">R$ 200,00</p>
+
+      <p class="parcelamento">
+        Até 4x de R$ 50,00 sem juros (ou R$ 180,00 à vista no PIX)
+      </p>
+
+      <ul class="detalhes-lista">
+        <li><strong>Cor:</strong> Preto clássico</li>
+        <li><strong>Comprimento:</strong> Longo</li>
+        <li><strong>Detalhes:</strong> Fenda lateral elegante e modelo tomara que caia</li>
+        <li><strong>Tamanhos disponíveis:</strong> PP ao GG (sob consulta)</li>
+      </ul>
+
+      <a
+        href="https://wa.me/5515997576895?text=Ol%C3%A1%2C%20J%C3%BAlia!%20Gostaria%20de%20comprar%20o%20Vestido%20Longo%20Preto%20por%20R%24%20200%2C00."
+        target="_blank"
+        rel="noopener"
+        class="btn-rosa">
+        COMPRAR PELO WHATSAPP
+      </a>
+
+    </div>
+  </section>
+
+  <section class="tamanhos" id="tamanhos">
+
+    <h3>Guia de Tamanhos</h3>
+
+    <table class="tabela-tamanhos">
+
+      <thead>
+        <tr>
+          <th>Tamanho</th>
+          <th>Busto (cm)</th>
+          <th>Cintura (cm)</th>
+          <th>Quadril (cm)</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr><td>PP (34)</td><td>80-84</td><td>62-66</td><td>90-94</td></tr>
+        <tr><td>P (36)</td><td>85-89</td><td>67-71</td><td>95-99</td></tr>
+        <tr><td>M (38)</td><td>90-94</td><td>72-76</td><td>100-104</td></tr>
+        <tr><td>G (40)</td><td>95-99</td><td>77-81</td><td>105-109</td></tr>
+        <tr><td>GG (42)</td><td>100-104</td><td>82-86</td><td>110-114</td></tr>
+      </tbody>
+
+    </table>
+  </section>
+
+  <footer id="contato">
+
+    <div class="contato-info">
+      <h3>Atendimento exclusivo</h3>
+      <p>Vendedora: <strong>Júlia</strong></p>
+      <p>WhatsApp: <strong>(15) 99757-6895</strong></p>
+    </div>
+
+    <div class="redes-sociais">
+      <a href="https://instagram.com/lavoie_boutique"
+         target="_blank"
+         rel="noopener">
+        @lavoie_boutique
+      </a>
+    </div>
+
+    <p class="copyright">
+      © Lavoie Boutique. Todos os direitos reservados.
+    </p>
+
+  </footer>
+
+</body>
+</html>
+
     </footer>
 
 </body>

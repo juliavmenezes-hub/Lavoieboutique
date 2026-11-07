@@ -1,350 +1,387 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Vestido longo preto Lavoie Boutique. Elegância e sofisticação por R$ 199,99.">
-  <title>Lavoie Boutique | Elegância em cada detalhe</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavoie Boutique | Elegância em Cada Detalhe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-principal: #FFFFFF;
+            --bg-suave: #FFF9FA;
+            --rosa-bebe: #FAD0EC;
+            --rosa-destaque: #E898B6;
+            --rosa-hover: #D883A3;
+            --marrom-suave: #4A3B37;
+            --cinza-texto: #6B5E5B;
+            --borda-suave: #F3E2E6;
+        }
 
-  <script src="https://cdn.tailwindcss.com"></script>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
 
-  <style>
-    * { box-sizing: border-box; scroll-behavior: smooth; }
+        body {
+            background-color: var(--bg-principal);
+            color: var(--cinza-texto);
+            line-height: 1.6;
+        }
 
-    body {
-      margin: 0;
-      background: #090909;
-      color: #f5f5f5;
-      font-family: Arial, sans-serif;
-    }
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--marrom-suave);
+            letter-spacing: 1px;
+        }
 
-    .gold { color: #d4af37; }
-    .gold-bg { background: #d4af37; }
-    .gold-border { border-color: #d4af37; }
+        header {
+            background-color: var(--bg-principal);
+            border-bottom: 1px solid var(--borda-suave);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .hero {
-      min-height: 90vh;
-      background:
-        linear-gradient(90deg, rgba(0,0,0,.95), rgba(0,0,0,.35)),
-        url("https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=1600")
-        center 30% / cover;
-    }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: var(--marrom-suave);
+            text-decoration: none;
+        }
 
-    .btn-gold {
-      background: #d4af37;
-      color: #080808;
-      padding: 15px 28px;
-      border-radius: 5px;
-      font-weight: bold;
-      display: inline-block;
-      transition: .3s;
-    }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--marrom-suave);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
 
-    .btn-gold:hover {
-      background: #f0d675;
-      transform: translateY(-2px);
-    }
+        nav a:hover {
+            color: var(--rosa-destaque);
+        }
 
-    .card {
-      background: #151515;
-      border: 1px solid #40351b;
-      border-radius: 12px;
-    }
+        .btn-rosa {
+            display: inline-block;
+            background-color: var(--rosa-destaque);
+            color: #FFFFFF;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(232, 152, 182, 0.3);
+        }
 
-    .product-image {
-      width: 100%;
-      height: 540px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
+        .btn-rosa:hover {
+            background-color: var(--rosa-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(232, 152, 182, 0.4);
+        }
 
-    th {
-      background: #d4af37;
-      color: #111;
-    }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 5%;
+            background-color: var(--bg-suave);
+            min-height: 80vh;
+        }
 
-    td, th {
-      padding: 15px;
-      border: 1px solid #40351b;
-      text-align: center;
-    }
+        .hero-text {
+            max-width: 50%;
+        }
 
-    .whatsapp {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      z-index: 20;
-      background: #25d366;
-      color: white;
-      padding: 15px 20px;
-      border-radius: 50px;
-      font-weight: bold;
-      box-shadow: 0 4px 15px #0008;
-    }
-  </style>
+        .hero-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p.subtitulo {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--rosa-destaque);
+            margin-bottom: 30px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .hero-image {
+            max-width: 45%;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .produto {
+            padding: 80px 5%;
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .produto-galeria {
+            flex: 1;
+            display: flex;
+            gap: 15px;
+        }
+
+        .produto-galeria img {
+            width: 50%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .produto-info {
+            flex: 1;
+        }
+
+        .produto-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .preco {
+            font-size: 1.8rem;
+            color: var(--marrom-suave);
+            font-weight: 600;
+            margin: 15px 0 5px 0;
+        }
+
+        .parcelamento {
+            font-size: 0.9rem;
+            color: var(--rosa-destaque);
+            margin-bottom: 25px;
+        }
+
+        .detalhes-lista {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .detalhes-lista li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--borda-suave);
+            font-size: 0.95rem;
+        }
+
+        .detalhes-lista strong {
+            color: var(--marrom-suave);
+        }
+
+        .tamanhos {
+            background-color: var(--bg-suave);
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .tamanhos h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .tabela-tamanhos {
+            max-width: 600px;
+            margin: 0 auto;
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+
+        .tabela-tamanhos th, .tabela-tamanhos td {
+            padding: 12px 15px;
+            border: 1px solid var(--borda-suave);
+        }
+
+        .tabela-tamanhos th {
+            background-color: var(--rosa-bebe);
+            color: var(--marrom-suave);
+        }
+
+        footer {
+            background-color: var(--bg-principal);
+            border-top: 1px solid var(--borda-suave);
+            padding: 40px 5% 20px;
+            text-align: center;
+        }
+
+        .contato-info {
+            margin-bottom: 25px;
+        }
+
+        .contato-info p {
+            margin: 5px 0;
+            font-size: 0.95rem;
+        }
+
+        .redes-sociais a {
+            color: var(--rosa-destaque);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 10px;
+        }
+
+        .copyright {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+
+        @media (max-width: 768px) {
+            .hero, .produto {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text, .hero-image, .produto-info {
+                max-width: 100%;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .produto-galeria {
+                flex-direction: column;
+            }
+
+            .produto-galeria img {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-  <!-- MENU -->
-  <header class="bg-black border-b border-yellow-700/40">
-    <nav class="max-w-7xl mx-auto p-5 flex justify-between items-center">
-      <a href="#" class="text-2xl font-bold tracking-widest gold">
-        LAVOIE BOUTIQUE
-      </a>
+    <header>
+        <a href="#" class="logo">LAVOIE BOUTIQUE</a>
+        <nav>
+            <a href="#produto">O Vestido</a>
+            <a href="#tamanhos">Tamanhos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
 
-      <div class="hidden md:flex gap-8 text-sm">
-        <a href="#produto" class="hover:text-yellow-400">Produto</a>
-        <a href="#medidas" class="hover:text-yellow-400">Medidas</a>
-        <a href="#contato" class="hover:text-yellow-400">Contato</a>
-      </div>
-    </nav>
-  </header>
-
-  <!-- CAPA -->
-  <section class="hero flex items-center px-6 md:px-20">
-    <div class="max-w-xl py-24">
-      <p class="gold tracking-[5px] mb-5">MODA FEMININA</p>
-
-      <h1 class="text-5xl md:text-7xl font-bold leading-tight">
-        ELEGÂNCIA QUE
-        <span class="gold">MARCA.</span>
-      </h1>
-
-      <p class="text-gray-300 text-lg mt-6 mb-8">
-        Descubra o poder de um look sofisticado.
-        Um vestido pensado para destacar sua beleza
-        em todos os momentos especiais.
-      </p>
-
-      <a href="#produto" class="btn-gold">
-        CONHEÇA O VESTIDO
-      </a>
-    </div>
-  </section>
-
-  <!-- PRODUTO -->
-  <section id="produto" class="py-20 px-6">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-
-      <img
-        class="product-image"
-        src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=1000"
-        alt="Vestido longo preto elegante"
-      >
-
-      <div>
-        <p class="gold tracking-widest mb-3">LANÇAMENTO LAVOIE</p>
-
-        <h2 class="text-4xl font-bold mb-6">
-          Vestido Longo Preto
-        </h2>
-
-        <p class="text-gray-300 leading-relaxed mb-6">
-          O vestido longo preto da Lavoie Boutique é a escolha
-          ideal para mulheres que desejam unir sofisticação,
-          feminilidade e personalidade.
-
-          Sua fenda lateral valoriza o movimento e proporciona
-          um visual marcante. As costas abertas com amarração
-          delicada acrescentam charme e elegância à peça.
-        </p>
-
-        <ul class="space-y-3 text-gray-300 mb-8">
-          <li>✦ Cor: Preto clássico</li>
-          <li>✦ Comprimento: Longo</li>
-          <li>✦ Detalhe: Fenda lateral</li>
-          <li>✦ Detalhe: Costas abertas</li>
-          <li>✦ Tamanhos: PP ao GG (consulte disponibilidade)</li>
-        </ul>
-
-        <div class="border-t border-yellow-700/40 pt-6">
-          <p class="text-gray-400">VALOR DO VESTIDO</p>
-
-          <p class="text-5xl gold font-bold my-3">
-            R$ 199,99
-          </p>
-
-          <p class="text-gray-300 mb-2">
-            Em até 3x de R$ 66,66 sem juros.
-          </p>
-
-          <p class="text-gray-400 text-sm mb-7">
-            Enviamos para todo o Brasil!
-          </p>
-
-          <a
-            class="btn-gold"
-            target="_blank"
-            rel="noopener"
-            href="https://wa.me/5515997576895?text=Olá%20Júlia!%20Quero%20comprar%20o%20vestido."
-          >
-            COMPRAR PELO WHATSAPP
-          </a>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>LAVOIE BOUTIQUE</h1>
+            <p class="subtitulo">Elegância em cada detalhe</p>
+            <p style="margin-bottom: 25px;">Descubra a sofisticação do nosso Vestido Longo Preto com fenda lateral e costas abertas. O equilíbrio perfeito entre delicadeza e poder.</p>
+            <a href="#produto" class="btn-rosa">CONHEÇA O VESTIDO</a>
         </div>
-      </div>
-    </div>
-  </section>
+        <div class="hero-image">
+            <img src="imagem1.jpg" alt="Vestido Longo Preto - Lavoie Boutique">
+        </div>
+    </section>
 
-  <!-- DETALHES -->
-  <section class="bg-zinc-950 py-20 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
-        <p class="gold tracking-widest">CADA DETALHE IMPORTA</p>
-        <h2 class="text-4xl font-bold mt-3">
-          Sofisticação em todos os ângulos
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="card p-3">
-          <img
-            class="w-full h-[500px] object-cover rounded-lg"
-            src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=1000"
-            alt="Vestido preto elegante"
-          >
-          <p class="gold text-center font-bold p-4">VISTA FRONTAL</p>
+    <section class="produto" id="produto">
+        <div class="produto-galeria">
+            <img src="imagem1.jpg" alt="Vestido Longo Preto - Frente">
+            <img src="imagem2.jpg" alt="Vestido Longo Preto - Costas">
         </div>
 
-        <div class="card p-3">
-          <img
-            class="w-full h-[500px] object-cover rounded-lg"
-            src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=1000"
-            alt="Detalhes do vestido preto"
-          >
-          <p class="gold text-center font-bold p-4">DETALHES DO LOOK</p>
+        <div class="produto-info">
+            <h2>Vestido Longo Preto</h2>
+            <p class="preco">R$ 199,99</p>
+            <p class="parcelamento">até 3x de R$ 66,66 sem juros</p>
+
+            <ul class="detalhes-lista">
+                <li><strong>Cor:</strong> Preto clássico</li>
+                <li><strong>Comprimento:</strong> Longo</li>
+                <li><strong>Detalhes:</strong> Fenda lateral elegante e costas abertas</li>
+                <li><strong>Tamanhos disponíveis:</strong> PP ao GG (sob consulta)</li>
+            </ul>
+
+            <a href="https://wa.me/5515997576895?text=Ol%C3%A1%2C%20J%C3%BAlia!%20Gostaria%20de%20comprar%20o%20Vestido%20Longo%20Preto." target="_blank" class="btn-rosa">
+                COMPRAR PELO WHATSAPP
+            </a>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- MEDIDAS -->
-  <section id="medidas" class="py-20 px-6">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-10">
-        <p class="gold tracking-widest">GUIA DE TAMANHOS</p>
-        <h2 class="text-4xl font-bold mt-3">Encontre seu tamanho</h2>
-        <p class="text-gray-400 mt-3">
-          Consulte as medidas de referência em centímetros.
-        </p>
-      </div>
-
-      <div class="overflow-x-auto">
-        <table class="w-full border-collapse">
-          <thead>
-            <tr>
-              <th>Tamanho</th>
-              <th>Busto</th>
-              <th>Cintura</th>
-              <th>Quadril</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr><td>PP</td><td>78–84</td><td>60–66</td><td>86–92</td></tr>
-            <tr><td>P</td><td>84–90</td><td>66–72</td><td>92–98</td></tr>
-            <tr><td>M</td><td>90–96</td><td>72–78</td><td>98–104</td></tr>
-            <tr><td>G</td><td>96–104</td><td>78–86</td><td>104–112</td></tr>
-            <tr><td>GG</td><td>104–112</td><td>86–94</td><td>112–120</td></tr>
-          </tbody>
+    <section class="tamanhos" id="tamanhos">
+        <h3>Guia de Tamanhos</h3>
+        <table class="tabela-tamanhos">
+            <thead>
+                <tr>
+                    <th>Tamanho</th>
+                    <th>Busto (cm)</th>
+                    <th>Cintura (cm)</th>
+                    <th>Quadril (cm)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PP</td>
+                    <td>80-84</td>
+                    <td>62-66</td>
+                    <td>90-94</td>
+                </tr>
+                <tr>
+                    <td>P</td>
+                    <td>85-89</td>
+                    <td>67-71</td>
+                    <td>95-99</td>
+                </tr>
+                <tr>
+                    <td>M</td>
+                    <td>90-94</td>
+                    <td>72-76</td>
+                    <td>100-104</td>
+                </tr>
+                <tr>
+                    <td>G</td>
+                    <td>95-99</td>
+                    <td>77-81</td>
+                    <td>105-109</td>
+                </tr>
+                <tr>
+                    <td>GG</td>
+                    <td>100-104</td>
+                    <td>82-86</td>
+                    <td>110-114</td>
+                </tr>
+            </tbody>
         </table>
-      </div>
+    </section>
 
-      <p class="text-gray-500 text-xs mt-5">
-        Atenção: medidas aproximadas de referência, não confirmadas
-        pelo fabricante desta peça. Consulte a Júlia para confirmar
-        as medidas reais e a disponibilidade dos tamanhos antes da compra.
-      </p>
-    </div>
-  </section>
+    <footer id="contato">
+        <div class="contato-info">
+            <h3>Atendimento exclusivo</h3>
+            <p>Vendedora: <strong>Júlia</strong></p>
+            <p>WhatsApp: <strong>(15) 99757-6895</strong></p>
+        </div>
 
-  <!-- BENEFÍCIOS -->
-  <section class="bg-zinc-950 py-16 px-6">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+        <div class="redes-sociais">
+            <a href="https://instagram.com/lavoie_boutique" target="_blank">@lavoie_boutique</a>
+        </div>
 
-      <div class="card p-8">
-        <div class="text-4xl gold mb-4">✦</div>
-        <h3 class="font-bold text-xl mb-2">Elegância</h3>
-        <p class="text-gray-400">Um visual sofisticado para ocasiões especiais.</p>
-      </div>
-
-      <div class="card p-8">
-        <div class="text-4xl gold mb-4">♡</div>
-        <h3 class="font-bold text-xl mb-2">Atendimento especial</h3>
-        <p class="text-gray-400">Fale diretamente com nossa vendedora Júlia.</p>
-      </div>
-
-      <div class="card p-8">
-        <div class="text-4xl gold mb-4">➤</div>
-        <h3 class="font-bold text-xl mb-2">Entrega nacional</h3>
-        <p class="text-gray-400">Enviamos para todo o Brasil.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTATO -->
-  <section id="contato" class="py-20 px-6 text-center">
-    <p class="gold tracking-widest">LAVOIE BOUTIQUE</p>
-
-    <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-5">
-      Seu próximo look começa aqui.
-    </h2>
-
-    <p class="text-gray-400 mb-8">
-      Fale com a Júlia e tire suas dúvidas sobre o vestido.
-    </p>
-
-    <a
-      href="https://wa.me/5515997576895?text=Olá%20Júlia!%20Gostaria%20de%20mais%20informações."
-      target="_blank"
-      rel="noopener"
-      class="btn-gold"
-    >
-      WHATSAPP DA JÚLIA
-    </a>
-
-    <div class="mt-8">
-      <a
-        href="https://www.instagram.com/lavoie_boutique?cplk=MTI1cjI1b3hrNjBxeg=="
-        target="_blank"
-        rel="noopener"
-        class="gold hover:text-white"
-      >
-        @lavoie_boutique
-      </a>
-    </div>
-  </section>
-
-  <!-- RODAPÉ -->
-  <footer class="bg-black border-t border-yellow-700/30 py-8 px-6 text-center">
-    <h3 class="gold text-xl font-bold tracking-widest">
-      LAVOIE BOUTIQUE
-    </h3>
-
-    <p class="text-gray-500 text-sm mt-3">
-      Elegância em cada detalhe.
-    </p>
-
-    <p class="text-gray-500 text-sm mt-3">
-      WhatsApp: (15) 99757-6895
-    </p>
-
-    <p class="text-gray-600 text-xs mt-6">
-      © 2026 Lavoie Boutique. Todos os direitos reservados.
-    </p>
-  </footer>
-
-  <a
-    class="whatsapp"
-    href="https://wa.me/5515997576895"
-    target="_blank"
-    rel="noopener"
-    aria-label="Falar com a vendedora Júlia pelo WhatsApp"
-  >
-    WhatsApp
-  </a>
+        <p class="copyright">© Lavoie Boutique. Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 </html>

@@ -3,384 +3,360 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lavoie Boutique | Elegância em Cada Detalhe</title>
+    <title>Lavoie Boutique - index.html</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* CSS Reset e Estilos Globais */
         :root {
-            --bg-principal: #FFFFFF;
-            --bg-suave: #FFF9FA;
-            --rosa-bebe: #FAD0EC;
-            --rosa-destaque: #E898B6;
-            --rosa-hover: #D883A3;
-            --marrom-suave: #4A3B37;
-            --cinza-texto: #6B5E5B;
-            --borda-suave: #F3E2E6;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
+            --primary-pink: #FAD0D3; /* Rosa Bebê */
+            --text-color: #333333;
+            --soft-brown: #555555;
+            --background-white: #FFFFFF;
+            --border-color: #EEEEEE;
         }
 
         body {
-            background-color: var(--bg-principal);
-            color: var(--cinza-texto);
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-white);
+            margin: 0;
+            padding: 0;
             line-height: 1.6;
         }
 
         h1, h2, h3, h4 {
-            font-family: 'Cormorant Garamond', serif;
-            color: var(--marrom-suave);
-            letter-spacing: 1px;
+            font-family: 'Playfair Display', serif;
+            color: #000;
+            margin: 0;
         }
 
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Utilidades */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
         header {
-            background-color: var(--bg-principal);
-            border-bottom: 1px solid var(--borda-suave);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 15px 5%;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            letter-spacing: 3px;
-            color: var(--marrom-suave);
-            text-decoration: none;
+        .header-logo-group {
+            display: flex;
+            align-items: center;
         }
 
-        nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: var(--marrom-suave);
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: color 0.3s;
+        .header-logo h1 {
+            font-size: 28px;
+            margin-right: 20px;
         }
 
-        nav a:hover {
-            color: var(--rosa-destaque);
+        .header-slogan p {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 14px;
+            color: #777;
+            margin: 0;
         }
 
-        .btn-rosa {
-            display: inline-block;
-            background-color: var(--rosa-destaque);
-            color: #FFFFFF;
-            padding: 14px 28px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(232, 152, 182, 0.3);
+        .header-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
         }
 
-        .btn-rosa:hover {
-            background-color: var(--rosa-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(232, 152, 182, 0.4);
+        .header-nav a {
+            font-size: 14px;
+            color: #000;
         }
 
+        /* Seção Hero (Capa) */
         .hero {
+            padding: 80px 0;
+        }
+
+        .hero-content {
             display: flex;
+            gap: 40px;
             align-items: center;
-            justify-content: space-between;
-            padding: 60px 5%;
-            background-color: var(--bg-suave);
-            min-height: 80vh;
         }
 
         .hero-text {
-            max-width: 50%;
-        }
-
-        .hero-text h1 {
-            font-size: 3.5rem;
-            line-height: 1.1;
-            margin-bottom: 15px;
-        }
-
-        .hero-text p.subtitulo {
-            font-size: 1.3rem;
-            font-style: italic;
-            color: var(--rosa-destaque);
-            margin-bottom: 30px;
-            font-family: 'Cormorant Garamond', serif;
+            flex: 1;
         }
 
         .hero-image {
-            max-width: 45%;
-            text-align: center;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-
-        .produto {
-            padding: 80px 5%;
-            display: flex;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .produto-galeria {
-            flex: 1;
-            display: flex;
-            gap: 15px;
-        }
-
-        .produto-galeria img {
-            width: 50%;
-            height: auto;
-            border-radius: 8px;
-            object-fit: cover;
-        }
-
-        .produto-info {
             flex: 1;
         }
 
-        .produto-info h2 {
-            font-size: 2.5rem;
+        /* Seção do Produto */
+        .product {
+            padding: 80px 0;
+        }
+
+        .product-content {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .product-gallery {
+            flex: 2;
+            display: flex;
+            gap: 20px;
+        }
+
+        .product-details {
+            flex: 1;
+        }
+
+        .product-title {
             margin-bottom: 10px;
         }
 
-        .preco {
-            font-size: 1.8rem;
-            color: var(--marrom-suave);
-            font-weight: 600;
-            margin: 15px 0 5px 0;
+        .product-price {
+            font-size: 32px;
+            font-weight: 700;
+            color: #000;
+            margin: 20px 0;
         }
 
-        .parcelamento {
-            font-size: 0.9rem;
-            color: var(--rosa-destaque);
-            margin-bottom: 25px;
+        .buy-button {
+            display: inline-block;
+            background-color: var(--primary-pink);
+            color: #000;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 16px;
+            margin-top: 30px;
         }
 
-        .detalhes-lista {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-
-        .detalhes-lista li {
-            padding: 8px 0;
-            border-bottom: 1px solid var(--borda-suave);
-            font-size: 0.95rem;
-        }
-
-        .detalhes-lista strong {
-            color: var(--marrom-suave);
-        }
-
-        .tamanhos {
-            background-color: var(--bg-suave);
-            padding: 60px 5%;
+        /* Galeria e Guia de Tamanhos */
+        .gallery-sizes {
+            padding: 80px 0;
             text-align: center;
         }
 
-        .tamanhos h3 {
-            font-size: 2rem;
+        .gallery-title {
+            color: var(--primary-pink);
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .sizes-title {
+            color: #000;
+            margin: 60px 0 40px;
+        }
+
+        .sizes-table-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        table {
+            width: 100%;
+            max-width: 600px;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #FDFDFD;
+            font-weight: 700;
+        }
+
+        /* Rodapé de Contato */
+        footer {
+            padding: 60px 0;
+            background-color: #FDFDFD;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            display: flex;
+            gap: 40px;
+            justify-content: space-between;
+        }
+
+        .contact-info {
+            flex: 2;
+        }
+
+        .social-links {
+            flex: 1;
+        }
+
+        .contact-title {
             margin-bottom: 20px;
         }
 
-        .tabela-tamanhos {
-            max-width: 600px;
-            margin: 0 auto;
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-        }
-
-        .tabela-tamanhos th, .tabela-tamanhos td {
-            padding: 12px 15px;
-            border: 1px solid var(--borda-suave);
-        }
-
-        .tabela-tamanhos th {
-            background-color: var(--rosa-bebe);
-            color: var(--marrom-suave);
-        }
-
-        footer {
-            background-color: var(--bg-principal);
-            border-top: 1px solid var(--borda-suave);
-            padding: 40px 5% 20px;
-            text-align: center;
-        }
-
-        .contato-info {
-            margin-bottom: 25px;
-        }
-
-        .contato-info p {
-            margin: 5px 0;
-            font-size: 0.95rem;
-        }
-
-        .redes-sociais a {
-            color: var(--rosa-destaque);
-            text-decoration: none;
-            font-weight: 600;
-            margin: 0 10px;
-        }
-
-        .copyright {
-            margin-top: 30px;
-            font-size: 0.8rem;
-            color: #aaa;
-        }
-
-        @media (max-width: 768px) {
-            .hero, .produto {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero-text, .hero-image, .produto-info {
-                max-width: 100%;
-            }
-
-            .hero-text h1 {
-                font-size: 2.5rem;
-            }
-
-            .produto-galeria {
-                flex-direction: column;
-            }
-
-            .produto-galeria img {
-                width: 100%;
-            }
+        .pink-link {
+            color: var(--primary-pink);
         }
     </style>
 </head>
 <body>
 
+    <!-- Cabeçalho -->
     <header>
-        <a href="#" class="logo">LAVOIE BOUTIQUE</a>
-        <nav>
-            <a href="#produto">O Vestido</a>
-            <a href="#tamanhos">Tamanhos</a>
-            <a href="#contato">Contato</a>
-        </nav>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-logo-group">
+                    <div class="header-logo"><h1>LAVOIE BOUTIQUE</h1></div>
+                    <div class="header-slogan"><p>"Elegância em cada detalhe"</p></div>
+                </div>
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="#">GALERIA</a></li>
+                        <li><a href="#">SOBRE</a></li>
+                        <li><a href="#">WHATSAPP</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
+    <!-- Seção Hero (Capa) -->
     <section class="hero">
-        <div class="hero-text">
-            <h1>LAVOIE BOUTIQUE</h1>
-            <p class="subtitulo">Elegância em cada detalhe</p>
-            <p style="margin-bottom: 25px;">Descubra a sofisticação do nosso Vestido Longo Preto com fenda lateral e costas abertas. O equilíbrio perfeito entre delicadeza e poder.</p>
-            <a href="#produto" class="btn-rosa">CONHEÇA O VESTIDO</a>
-        </div>
-        <div class="hero-image">
-            <img src="imagem1.jpg" alt="Vestido Longo Preto - Lavoie Boutique">
-        </div>
-    </section>
-
-    <section class="produto" id="produto">
-        <div class="produto-galeria">
-            <img src="imagem1.jpg" alt="Vestido Longo Preto - Frente">
-            <img src="imagem2.jpg" alt="Vestido Longo Preto - Costas">
-        </div>
-
-        <div class="produto-info">
-            <h2>Vestido Longo Preto</h2>
-            <p class="preco">R$ 199,99</p>
-            <p class="parcelamento">até 3x de R$ 66,66 sem juros</p>
-
-            <ul class="detalhes-lista">
-                <li><strong>Cor:</strong> Preto clássico</li>
-                <li><strong>Comprimento:</strong> Longo</li>
-                <li><strong>Detalhes:</strong> Fenda lateral elegante e costas abertas</li>
-                <li><strong>Tamanhos disponíveis:</strong> PP ao GG (sob consulta)</li>
-            </ul>
-
-            <a href="https://wa.me/5515997576895?text=Ol%C3%A1%2C%20J%C3%BAlia!%20Gostaria%20de%20comprar%20o%20Vestido%20Longo%20Preto." target="_blank" class="btn-rosa">
-                COMPRAR PELO WHATSAPP
-            </a>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p style="font-family: 'Playfair Display', serif; font-size: 16px;">CONHEÇA O VESTIDO</p>
+                    <p style="color: var(--soft-brown); font-size: 14px;">Onde o requinte encontra a feminilidade. O equilíbrio perfeito de sofisticação e sensualidade, criado para mulheres que desejam ser lembradas.</p>
+                </div>
+                <div class="hero-image">
+                    <!-- Nova imagem de frente em ambiente luxuoso -->
+                    <img src="image_3.png" alt="Lavoie Boutique Vestido Preto Hero">
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="tamanhos" id="tamanhos">
-        <h3>Guia de Tamanhos</h3>
-        <table class="tabela-tamanhos">
-            <thead>
-                <tr>
-                    <th>Tamanho</th>
-                    <th>Busto (cm)</th>
-                    <th>Cintura (cm)</th>
-                    <th>Quadril (cm)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>PP</td>
-                    <td>80-84</td>
-                    <td>62-66</td>
-                    <td>90-94</td>
-                </tr>
-                <tr>
-                    <td>P</td>
-                    <td>85-89</td>
-                    <td>67-71</td>
-                    <td>95-99</td>
-                </tr>
-                <tr>
-                    <td>M</td>
-                    <td>90-94</td>
-                    <td>72-76</td>
-                    <td>100-104</td>
-                </tr>
-                <tr>
-                    <td>G</td>
-                    <td>95-99</td>
-                    <td>77-81</td>
-                    <td>105-109</td>
-                </tr>
-                <tr>
-                    <td>GG</td>
-                    <td>100-104</td>
-                    <td>82-86</td>
-                    <td>110-114</td>
-                </tr>
-            </tbody>
-        </table>
+    <!-- Seção do Produto -->
+    <section class="product">
+        <div class="container">
+            <div class="product-content">
+                <div class="product-gallery">
+                    <!-- Novas imagens lado a lado -->
+                    <img src="image_3.png" alt="Vestido Preto Frente Lavoie Boutique">
+                    <img src="image_2.png" alt="Vestido Preto Costas Lavoie Boutique">
+                </div>
+                <div class="product-details">
+                    <h2 class="product-title">CONHEÇA O VESTIDO</h2>
+                    <p style="color: var(--soft-brown);">Onde o requinte encontra a feminilidade.</p>
+                    <p style="color: var(--soft-brown);">O equilíbrio perfeito de sofisticação e sensualidade.</p>
+                    
+                    <p class="product-price">R$ 2468,00</p>
+                    
+                    <p style="font-size: 14px; font-weight: 700;">Até 6x de R$ 411,33 sem juros</p>
+                    <p style="font-size: 14px; color: var(--soft-brown); margin: 0;">R$ 2.221,20 à vista (10% Desc.) no Pix.</p>
+                    <p style="font-size: 14px; color: var(--soft-brown); margin: 0;">Cartão de Crédito ou Débito e Pix.</p>
+                    
+                    <a href="#" class="buy-button">COMPRAR PELO WHATSAPP</a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer id="contato">
-        <div class="contato-info">
-            <h3>Atendimento exclusivo</h3>
-            <p>Vendedora: <strong>Júlia</strong></p>
-            <p>WhatsApp: <strong>(15) 99757-6895</strong></p>
-        </div>
+    <!-- Galeria e Guia de Tamanhos -->
+    <section class="gallery-sizes">
+        <div class="container">
+            <h3 class="gallery-title">GALERIA</h3>
+            <div class="product-gallery">
+                <img src="image_3.png" alt="Lavoie Boutique Galeria Frente">
+                <img src="image_2.png" alt="Lavoie Boutique Galeria Costas">
+            </div>
 
-        <div class="redes-sociais">
-            <a href="https://instagram.com/lavoie_boutique" target="_blank">@lavoie_boutique</a>
-        </div>
+            <h3 class="sizes-title">GUIA DE TAMANHOS</h3>
+            <div class="sizes-table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>PP</th>
+                            <th>P</th>
+                            <th>M</th>
+                            <th>G</th>
+                            <th>GG</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>34</td>
+                            <td>36</td>
+                            <td>38</td>
+                            <td>40</td>
+                            <td>42</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-        <p class="copyright">© Lavoie Boutique. Todos os direitos reservados.</p>
+            <p style="font-size: 14px; color: #000; margin-bottom: 5px;">
+                <span style="color: var(--primary-pink); margin-right: 5px;">📸</span>
+                <a href="#" class="pink-link">Lavoieboutique</a>
+                <span style="margin-left: 20px;">📘</span>
+                <a href="#" class="pink-link">Lavoieboutique</a>
+            </p>
+            <p style="font-size: 14px; color: var(--soft-brown); font-weight: 700;">Agenda do direct... peça única, aproveite!</p>
+            <p style="font-size: 14px;"><a href="http://lavoieboutique.com" class="pink-link">lavoieboutique.com</a></p>
+        </div>
+    </section>
+
+    <!-- Rodapé de Contato -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h2 class="contact-title">CONTATO</h2>
+                    <p style="color: var(--soft-brown); font-size: 14px;">Estamos ansiosos para ouvir de você! Tem dúvidas sobre um produto, pedido ou simplesmente quer dizer oi? Entre em contato conosco. Estamos prontos para ajudar com tudo o que você precisa.</p>
+                    
+                    <div style="margin-top: 30px; font-size: 14px; color: #000;">
+                        <p><span style="color: var(--primary-pink); margin-right: 10px;">📞</span> <a href="#" class="pink-link">(21) 98888-8888</a> / (21) 98888-8888</p>
+                        <p><span style="color: var(--primary-pink); margin-right: 10px;">📧</span> Lavoie_Boutique@contato.com.br</p>
+                        <p><span style="color: var(--primary-pink); margin-right: 10px;">📍</span> Rua das Flores, 123. Cidade das Orquídeas.</p>
+                        <p>CEP: 12345-678</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <p style="font-size: 14px; color: #000; font-weight: 700;">LINKS</p>
+                    <div style="margin-top: 20px; font-size: 14px; color: #000;">
+                        <p><span style="color: var(--primary-pink); margin-right: 5px;">📸</span> <a href="#" class="pink-link">Lavoieboutique</a></p>
+                        <p><span style="color: var(--primary-pink); margin-right: 5px;">📘</span> <a href="#" class="pink-link">Lavoieboutique</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
 </body>
